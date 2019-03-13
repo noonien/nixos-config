@@ -1,0 +1,12 @@
+diff --git a/src/vte.cc b/src/vte.cc
+--- a/src/vte.cc
++++ b/src/vte.cc
+@@ -9241,7 +9241,7 @@ VteTerminalPrivate::draw_rows(VteScreen *screen_,
+ 							y,
+ 							(j - i) * column_width + bold_offset,
+ 							row_height,
+-							&bg, VTE_DRAW_OPAQUE);
++							&bg, m_background_alpha);
+ 				}
+ 				/* We'll need to continue at the first cell which didn't
+ 				 * match the first one in this set. */
